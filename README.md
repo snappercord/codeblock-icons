@@ -2,9 +2,9 @@
 Add some neat icons to the top left of discords codeblocks to make them more appealing **(must be using powercords codeblocks plugin)** (supports all 183 hljs types)
 
 ## Installation
-To install go to **Themes -> Quick CSS** then paste 
+
 ```
-@import url('https://raw.githack.com/Snapperito/CSS-Snippets/main/Codeblock-Icons/codeblockicons.css');
+git clone https://github.com/Snapperito/codeblock-icons
 ```
 
 # Previews
