@@ -1,0 +1,8 @@
+{
+    "name": "Codeblock Icons",
+    "version": "1.0.0",
+    "license": "MIT",
+    "theme": "codeblockicons.css",
+    "author": "Snapperito#0001",
+    "description": "Add neat looking language icons to code blocks"
+}
