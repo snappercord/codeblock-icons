@@ -1,4 +1,4 @@
-# Codeblock Icons
+# Codeblock Icons (SCSS COMPILER REWRITE IN PROGRESS :)
 Add some neat icons to the top left of discords codeblocks to make them more appealing **(must be using powercords codeblocks plugin)** (supports all 183 hljs types)
 
 ## Installation
