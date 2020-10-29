@@ -12,7 +12,7 @@ $shade: rgba(0, 0, 0, 0.2);
 
       border-right: 1px solid $shade;
 
-      padding: 25px 1px 0px 7px; text-align: center; line-height: 1.125rem;
+      padding: 0px 4px; text-align: center; line-height: 1.125rem;
 
       $lines: "";
 
@@ -38,7 +38,7 @@ $shade: rgba(0, 0, 0, 0.2);
          /* Icon */
          background: var(--cbi-icon) no-repeat;
 
-         background-position: 7px;
+         background-position: 8px;
          background-size: 15px;
 
          /* Name */
