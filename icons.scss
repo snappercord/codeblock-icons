@@ -6,5 +6,27 @@ $langs_alt: (
     'erlang-repl': erlang, fs: fsharp, htmlbars: html, 
     js: javascript, julia-repl: julia, 'php-template': php, 
     'profile': 'python-misc', py: python, 'python-repl': python,
-    reasonml: reason, scss: sass, ts: typescript
+    reasonml: reason, ts: typescript
 );
+
+code.hljs {
+   --cbi-name: "plain text";
+   --cbi-icon: #{svg('./icons/vscode-material-icon-theme/icons/file.svg')};
+}
+
+@mixin icon($id, $path) {
+   code.hljs.#{$id} {
+      --cbi-name: "#{$path}";
+      --cbi-icon: #{svg("./icons/vscode-material-icon-theme/icons/" + $path + ".svg")};
+   };
+}
+
+/* Special case cause bad */
+code.hljs.scss {
+   --cbi-name: "scss";
+   --cbi-icon: #{svg("./icons/vscode-material-icon-theme/icons/sass.svg")};
+};
+ 
+@each $lang in $langs { @include icon($lang, $lang) }
+
+@each $id, $path in $langs_alt { @include icon($id, $path) }

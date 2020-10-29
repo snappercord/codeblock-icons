@@ -1,61 +1,55 @@
-@import 'variables';
+@import 'icons';
 
 $shade: rgba(0, 0, 0, 0.2);
 
 
-.markup-2BOw-j pre {
-  position: relative; overflow: hidden;
-  margin-bottom: 5px; background-color: $shade;
+.markup-2BOw-j > pre {
+   position: relative; overflow: hidden;
+   margin-bottom: 5px; background-color: $shade;
+
+   /* Line Numbers */
+   &::before {
+      position: absolute;
+      width: 20px; 
+
+      border-right: 1px solid $shade;
+
+      padding: 0px 4px; text-align: center; line-height: 1.125rem;
+
+      $lines: " ";
+
+      @for $i from 1 through 999 { $lines: $lines + $i + "\a" + " "; }
+
+      content: $lines;
+   }
+
+   &>code.hljs {
+      padding: 25px 0.25em 0px 35px !important;
+      overflow: hidden;
+
+      /* Language Header */
+      &::before {
+         position: absolute;
+         width: 100%; height: 20px;
+         top: 0; left: 0;
+
+         border-bottom: 1px solid $shade;
+
+         padding: 0px 35px; display: flex; align-items: center;
+
+         /* Icon */
+         background-size: 15px;
+         background-position: 8px center;
+
+         background: var(--cbi-icon) left/2% no-repeat;
+
+         /* Name */
+         color: var(--text-normal); font-size: 0.8em;
+         text-transform: uppercase; font-weight: bold;
+
+         font-family: "Raleway", sans-serif;
+
+         content: var(--cbi-name);
+      }
+   }
 }
-
-
-$lines: " ";
-
-@for $i from 1 through 999 {
-  $lines: $lines + $i + "\a" + " ";
-}
-
-.markup-2BOw-j > pre:before {
-   content: $lines;
-
-   width: 20px; padding:0px 4px;
-   position: absolute; 
-   text-align: center; line-height: 1.125rem;
-   border-right: 1px solid $shade;
-}
-
-.hljs {
-   padding: 25px 0.25em 0px 35px !important;
-   overflow: hidden;
-}
-
-.hljs::before {
-   content: "plain text";
-   
-   width: 100%; height: 20px; padding: 0 35px;
-   top: 0; left: 0;
-   position: absolute;
-   border-bottom: 1px solid $shade;
-   display: flex; align-items: center;
-
-   color: var(--text-normal); font-size: 0.8em;
-   text-transform: uppercase; font-weight: bold;
-
-   font-family: "Raleway", sans-serif;
-
-   background: var(--icon) left/2% no-repeat;
-   --icon: url("https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/master/icons/file.svg");
-   background-size: 15px;
-   background-position: 8px center;
-}
-
-@mixin icon($id, $path) {
-   .hljs.#{$id}::before {
-      content: "#{$path}";
-       --icon: #{svg("./icons/vscode-material-icon-theme/icons/" + $path + ".svg")};
-   };
-}
-
-@each $lang in $langs { @include icon($lang, $lang) }
-
-@each $id, $path in $langs_alt { @include icon($id, $path) }

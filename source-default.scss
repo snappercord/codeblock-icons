@@ -1,21 +1,10 @@
-@import 'variables';
+@import 'icons';
 
 .powercord-codeblock-lang::before {
     margin-right: 4px; margin-left: -5px;
 
-    content: "";
     padding: 2px 10px 0px 10px;
+    content: "";
 
-    background: var(--icon) center/70% no-repeat;
-    --icon: #{svg('./icons/vscode-material-icon-theme/icons/file.svg')};
+    background: var(--cbi-icon) center/70% no-repeat;
 }
-
-@mixin icon($id, $path) {
-    .hljs.#{$id} .powercord-codeblock-lang::before {
-        --icon: #{svg("./icons/vscode-material-icon-theme/icons/" + $path + ".svg")};
-    };
-}
-
-@each $lang in $langs { @include icon($lang, $lang) }
-
-@each $id, $path in $langs_alt { @include icon($id, $path) }
