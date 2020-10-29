@@ -18,9 +18,9 @@ $shade: rgba(0, 0, 0, 0.2);
 
       $lines: "";
 
-      @for $i from 1 through 999 { $lines: $lines + $i + "\a"; }
+      @for $i from 1 through 999 { $lines: $lines + $i + "\n"; }
 
-      content: $lines;
+      content: "#{$lines}";
    }
 
    &>code.hljs {
