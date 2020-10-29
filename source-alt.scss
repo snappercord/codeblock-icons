@@ -16,7 +16,7 @@ $shade: rgba(0, 0, 0, 0.2);
 
       padding: 0px 4px; text-align: center; line-height: 1.125rem;
 
-      content: "#{$lines}";
+      content: var(--cbi-lines);
    }
 
    &>code.hljs {
