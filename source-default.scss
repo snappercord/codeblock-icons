@@ -4,7 +4,7 @@
     margin-right: 4px;
     margin-left: -5px;
     background: var(--icon) center/70% no-repeat;
-    --icon: url('./icons/vscode-material-icon-theme/file.svg');
+    --icon: #{svg('./icons/vscode-material-icon-theme/file.svg')};
 }
 
 @mixin icon($lang_id, $path) {
