@@ -1,5 +1,4 @@
 @import 'icons';
-@import 'lines';
 
 $shade: rgba(0, 0, 0, 0.2);
 
@@ -16,7 +15,11 @@ $shade: rgba(0, 0, 0, 0.2);
 
       padding: 0px 4px; text-align: center; line-height: 1.125rem;
 
-      content: var(--cbi-lines);
+      $lines: " ";
+
+      @for $i from 1 through 999 { $lines: $lines + $i + "\a" + " "; }
+
+      content: $lines;
    }
 
    &>code.hljs {
