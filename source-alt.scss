@@ -9,7 +9,7 @@ $shade: rgba(0, 0, 0, 0.2);
 }
 
 
-$lines: "";
+$lines: " ";
 
 @for $i from 1 through 999 {
   $lines: $lines + $i + "\a" + " ";
