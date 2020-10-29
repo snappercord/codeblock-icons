@@ -1,11 +1,20 @@
 # Codeblock Icons ![.github/workflows/sassbuild.yml](https://github.com/Snapperito/codeblock-icons/workflows/.github/workflows/sassbuild.yml/badge.svg?branch=main&event=push)
-A discord theme compatible with most other themes made for [Powercord](https://powercord.dev). Adds neat looking language icons to code blocks (supports all 183 hljs types). (works well with [Settings Icons](https://github.com/Snapperito/Settings-Icons))
+A discord theme compatible with most other themes. Adds neat looking language icons to code blocks (supports all 183 hljs types). (works well with [Settings Icons](https://github.com/Snapperito/Settings-Icons))
+
+The tweaked BD/Web version adds the same language header & line numbers feature to codeblocks that Powercord does, with a few minor bugs.
 
 ## Installation
+Powercord:
+
 Head over to your themes folder, open a command prompt / powershell / terminal / or git bash and enter the following:
 ```
 git clone https://github.com/Snapperito/codeblock-icons
 ```
+[BetterDiscord](https://betterdiscord.net/ghdl?id=3425)
+
+Web:
+- Install [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) ([Firefox version](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)).
+- Visit [this url](https://snapperito.github.io/codeblock-icons/codeblock-tweaks.user.css)
 
 # Previews
 

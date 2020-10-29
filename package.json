@@ -1,0 +1,19 @@
+{
+    "name": "codeblock-icons",
+    "version": "1.0.0",
+    "description": "Add line numbers & fancy language icons/header's to codeblocks",
+    "main": "index.js",
+    "scripts": {
+        "build": "node build_web.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Snapperito/codeblock-icons.git"
+    },
+    "author": "Snapperito",
+    "bugs": {
+        "url": "https://github.com/Snapperito/codeblock-icons/issues"
+    },
+    "homepage": "https://github.com/Snapperito/codeblock-icons#readme"
+}
+  
