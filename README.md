@@ -1,8 +1,8 @@
-# Codeblock Icons (SCSS COMPILER REWRITE IN PROGRESS :)
-Add some neat icons to the top left of discords codeblocks to make them more appealing **(must be using powercords codeblocks plugin)** (supports all 183 hljs types)
+# Codeblock Icons ![.github/workflows/sassbuild.yml](https://github.com/Snapperito/codeblock-icons/workflows/.github/workflows/sassbuild.yml/badge.svg?branch=main&event=push)
+A discord theme compatible with most other themes made for [Powercord](https://powercord.dev). Adds neat looking language icons to code blocks (supports all 183 hljs types). (works well with [Settings Icons](https://github.com/Snapperito/Settings-Icons))
 
 ## Installation
-
+Head over to your themes folder, open a command prompt / powershell / terminal / or git bash and enter the following:
 ```
 git clone https://github.com/Snapperito/codeblock-icons
 ```
@@ -34,3 +34,8 @@ git clone https://github.com/Snapperito/codeblock-icons
 
 
 </details>
+
+### Credits
+- [Snapperito](https://github.com/Snapperito): Idea, Method, & Layout
+- [MulverineX](https://github.com/MulverineX): Refactor, maintenance
+- [AAGaming](https://github.com/ADoesGit): Github Actions script to build files for performance.
