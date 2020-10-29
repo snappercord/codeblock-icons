@@ -1,16 +1,7 @@
 @import 'icons';
+@import 'lines';
 
 $shade: rgba(0, 0, 0, 0.2);
-
-@function str-replace($string, $search, $replace: '') {
-   $index: str-index($string, $search);
-
-   @if $index {
-      @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-   }
-
-   @return $string;
-}
 
 .markup-2BOw-j > pre {
    position: relative; overflow: hidden;
@@ -24,12 +15,6 @@ $shade: rgba(0, 0, 0, 0.2);
       border-right: 1px solid $shade;
 
       padding: 0px 4px; text-align: center; line-height: 1.125rem;
-
-      $lines: "";
-
-      @for $i from 1 through 999 { $lines: $lines + $i + "\a"; }
-
-      $lines: #{str-replace($lines, " ")};
 
       content: "#{$lines}";
    }
