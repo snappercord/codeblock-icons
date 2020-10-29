@@ -9,13 +9,12 @@ $shade: rgba(0, 0, 0, 0.2);
    /* Line Numbers */
    &::before {
       position: absolute;
-      width: 20px; 
 
       border-right: 1px solid $shade;
 
-      padding: 0px 4px; text-align: center; line-height: 1.125rem;
+      padding: 25px 1px 0px 7px; text-align: center; line-height: 1.125rem;
 
-      $lines: " ";
+      $lines: "";
 
       @for $i from 1 through 999 { $lines: $lines + $i + "\a"; }
 
@@ -37,10 +36,10 @@ $shade: rgba(0, 0, 0, 0.2);
          display: flex; align-items: center;
 
          /* Icon */
+         background: var(--cbi-icon) no-repeat;
+         
          background-position: 5px;
          background-size: 15px;
-
-         background: var(--cbi-icon) no-repeat;
 
          /* Name */
          padding-left: 32px;
