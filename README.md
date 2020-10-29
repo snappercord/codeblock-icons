@@ -1,4 +1,4 @@
-# Codeblock Icons
+# Codeblock Icons ![.github/workflows/sassbuild.yml](https://github.com/Snapperito/codeblock-icons/workflows/.github/workflows/sassbuild.yml/badge.svg?branch=main&event=push)
 A discord theme compatible with most other themes made for [Powercord](https://powercord.dev). Adds neat looking language icons to code blocks (supports all 183 hljs types). (works well with [Settings Icons](https://github.com/Snapperito/Settings-Icons))
 
 ## Installation
