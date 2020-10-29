@@ -1,0 +1,47 @@
+@import "mixins";
+
+.powercord-codeblock-lang::before {
+    content: "";
+    padding: 2px 10px 0 10px;
+    margin-right: 4px;
+    margin-left: -5px;
+    background: var(--icon) center/70% no-repeat;
+    --icon: url('./icons/vscode-material-icon-theme/file.svg');
+}
+
+@mixin icon($lang_id, $path) {
+    .hljs.#{$lang-id} .powercord-codeblock-lang::before {
+        --icon: #{svg("./icons/vscode-material-icon-theme/icons/" + $path + ".svg")};
+    };
+}
+
+$langs: actionscript, applescript, arduino, html, xml, asciidoc, autohotkey, autoit, brainfuck, c, clojure, cmake, coffee, crystal, css, d, markdown, dart, diff, django, elixir, elm, 'ruby', erlang, fortran, fsharp, go, gradle, groovy, haml, handlebars, haskell, haxe, http, java, javascript, json, julia, kotlin, lisp, livescript, lua, makefile, mathematica, matlab, perl, moonscript, nix, ocaml, php, powershell, processing, prolog, puppet, python, 'r', rust, sas, scala, scheme, sml, stylus, swift, yaml, tcl, twig, typescript, vala, verilog, vim;
+
+@each $lang in $langs {
+    @include icon($lang, $lang)
+}
+
+
+/* Special Casing */
+
+@include icon(as, actionscript); 
+@include icon(arm, assembly);
+@include icon(bash, console);
+@include icon(csharp, c);
+@include icon(coffeescript, coffee);
+@include icon(cs, csharp);
+@include icon(md, markdown);
+@include icon(dockerfile, docker);
+@include icon(dsconfig, settings);
+@include icon('erlang-repl', erlang);
+@include icon(fs, fsharp);
+@include icon(htmlbars, html);
+@include icon(js, javascript);
+@include icon(julia-repl, julia);
+@include icon('php-template', php);
+@include icon('profile', 'python-misc');
+@include icon(py, python);
+@include icon('python-repl', python);
+@include icon(reasonml, reason);
+@include icon(scss, sass);
+@include icon(ts, typescript);
