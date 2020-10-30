@@ -1,7 +1,7 @@
 const fs = require('fs');
 const request = require('request');
 
-request('https://raw.githubusercontent.com/Snapperito/info/a220a176666f7f4128fa00137dc4f80759f78c99/DISCORDHLJS.md', {}, (err, res, body) => {
+request('https://raw.githubusercontent.com/Snapperito/info/main/DISCORDHLJS.md', {}, (err, res, body) => {
     let langs = body.split('\n').slice(3).slice(0, -1);
 
     langs.forEach((e, i) => {
@@ -10,14 +10,14 @@ request('https://raw.githubusercontent.com/Snapperito/info/a220a176666f7f4128fa0
         let classes = lang[1] ? lang[1].split(/\,\s?/) : false;
 
         if (classes) {
-            classes.forEach((c, j) => classes[j] = c.trim());
+            let classString = "";
 
-            classes = `["${classes.join('", "')}"]`;
+            classes.forEach((c, j) => classString += `${j}: "${c.trim()}", `);
+
+            classes = classString;
         }
 
-        langs[i] = `"${
-            lang[2] !== '' ? lang[2] : false}": (name: "${
-            lang[0].trim()}", class: ${classes})`;
+        langs[i] = `"${lang[0].trim()}": (classes: (${classes.trim()}), icon: "${lang[2] !== '' ? lang[2] : false}")`;
     })
     
     fs.writeFileSync('langs.scss', `$langs: (${langs.join(', ')});`)
