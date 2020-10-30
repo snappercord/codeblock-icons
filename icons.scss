@@ -16,7 +16,10 @@ code.hljs {
    
    #{$selector} {
       --cbi-name: "#{$name}";
-      --cbi-icon: #{svg("./icons/" + $icon + ".svg")};
+
+      @if ($icon != 'false') {
+         --cbi-icon: #{svg("./icons/" + $icon + ".svg")};
+      }
    };
 }
  
