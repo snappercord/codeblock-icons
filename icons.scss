@@ -11,6 +11,7 @@ code.hljs {
    @each $i, $class in $classes {
       $proceeding: "";
       @if ($i != 0) { $proceeding: ","; }
+      @debug $class;
       $selector: $selector + $proceeding + "code.hljs." + $class;
    }
    
