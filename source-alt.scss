@@ -12,43 +12,13 @@ $shade: rgba(0, 0, 0, 0.2);
 
       border-right: 1px solid $shade;
 
-      padding: 25px 1px 0px 7px; text-align: center; line-height: 1.125rem;
+      padding: 0px 4px; text-align: center; line-height: 1.125rem;
 
       $lines: "";
 
       @for $i from 1 through 999 { $lines: $lines + $i + "\a"; }
 
       content: $lines;
-   }
-
-   &>code.hljs {
-      padding: 25px 0.25em 0px 35px !important;
-      overflow: hidden;
-
-      /* Language Header */
-      &::before {
-         position: absolute;
-         width: 100%; height: 22px;
-         top: 0; left: 0;
-
-         border-bottom: 1px solid $shade;
-
-         display: flex; align-items: center;
-
-         /* Icon */
-         background: var(--cbi-icon) no-repeat;
-
-         background-position: 7px;
-         background-size: 15px;
-
-         /* Name */
-         padding-left: 35px;
-         color: var(--text-normal); font-size: 0.8em;
-         text-transform: uppercase; font-weight: bold;
-         font-family: "Raleway", sans-serif;
-
-         content: var(--cbi-name);
-      }
    }
 }
 
