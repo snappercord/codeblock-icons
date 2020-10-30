@@ -14,13 +14,13 @@ jobs:
             submodules: true
             
       - name: Compile CSS from Default
-        uses: AAGaming00/sass-build@master
+        uses: AAGaming00/sass-build@dev
         with:
           source: source-default.scss
           destination: dist-default.css
       
       - name: Compile CSS from Alt
-        uses: AAGaming00/sass-build@master
+        uses: AAGaming00/sass-build@dev
         with:
           source: source-alt.scss
           destination: dist-alt.css
