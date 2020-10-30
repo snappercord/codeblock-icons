@@ -1,4 +1,4 @@
-@import 'langs';
+@import 'icons';
 
 $shade: rgba(0, 0, 0, 0.2);
 
@@ -12,7 +12,7 @@ $shade: rgba(0, 0, 0, 0.2);
 
       border-right: 1px solid $shade;
 
-      padding: 25px 1px 0px 7px; text-align: center; line-height: 1.125rem;
+      padding: 0px 4px; text-align: center; line-height: 1.125rem;
 
       $lines: "";
 
@@ -38,7 +38,7 @@ $shade: rgba(0, 0, 0, 0.2);
          /* Icon */
          background: var(--cbi-icon) no-repeat;
 
-         background-position: 7px;
+         background-position: 8px;
          background-size: 15px;
 
          /* Name */
@@ -50,28 +50,4 @@ $shade: rgba(0, 0, 0, 0.2);
          content: var(--cbi-name);
       }
    }
-}
-
-code.hljs {
-   --cbi-name: "plain text";
-   --cbi-icon: #{svg('./icons/vscode-material-icon-theme/icons/file.svg')};
-}
-
-@each $name, $data in $langs {
-   $icon: map_get($data, icon);
-
-   $selector: "";
-    
-   @each $i, $class in map_get($data, classes) {
-      $proceeding: "";
-      @if ($i != 0) { $proceeding: ","; } 
-      
-      $selector: $selector + $proceeding + "code.hljs." + $class;
-   }
-   
-   #{$selector} {
-      --cbi-name: "#{$name}";
-
-      @if ($icon != 'false') { --cbi-icon: #{svg("./icons/" + $icon + ".svg")}; }
-   };
 }
