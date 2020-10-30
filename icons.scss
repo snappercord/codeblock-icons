@@ -25,5 +25,5 @@ code.hljs {
 }
  
 @each $name, $data in $langs {
-   @include language($name, map_get($data, class), map_get($data, icon));
+   @include language($name, map_get($data, classes), map_get($data, icon));
 }
