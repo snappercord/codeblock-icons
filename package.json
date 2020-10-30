@@ -14,6 +14,8 @@
     "bugs": {
         "url": "https://github.com/Snapperito/codeblock-icons/issues"
     },
-    "homepage": "https://github.com/Snapperito/codeblock-icons#readme"
+    "homepage": "https://github.com/Snapperito/codeblock-icons#readme",
+    "dependencies": {
+        "request": "^2.88.2"
+    }
 }
-  
