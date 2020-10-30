@@ -6,7 +6,7 @@ code.hljs {
 }
 
 @mixin icon($icon_path, $data) {
-   code.hljs.#{list.nth(list.nth($data, 1),0)} {
+   code.hljs.#{list.nth(#{list.nth($data, 1)}, 0)} {
       --cbi-name: "#{list.nth($data, 0)}";
       --cbi-icon: #{svg("./icons/" + $icon + ".svg")};
    };
