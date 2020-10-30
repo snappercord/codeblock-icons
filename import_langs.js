@@ -16,9 +16,8 @@ request('https://raw.githubusercontent.com/Snapperito/info/a220a176666f7f4128fa0
         }
 
         langs[i] = `"${
-            lang[2] !== '' ? lang[2] : false}": ["${ // Icon
-            lang[0].trim()}", ${ // Display Name
-            classes}]`; // Classes
+            lang[2] !== '' ? lang[2] : false}": (name: "${
+            lang[0].trim()}", class: ${classes})`;
     })
     
     fs.writeFileSync('langs.scss', `$langs: (${langs.join(', ')});`)

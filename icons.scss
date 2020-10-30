@@ -5,11 +5,13 @@ code.hljs {
    --cbi-icon: #{svg('./icons/vscode-material-icon-theme/icons/file.svg')};
 }
 
-@mixin icon($icon_path, $data) {
-   code.hljs.#{list.nth(#{list.nth($data, 1)}, 0)} {
-      --cbi-name: "#{list.nth($data, 0)}";
+@mixin language($name, $classes, $icon) {
+   code.hljs.#{list.nth($classes, 0)} {
+      --cbi-name: "#{$name}";
       --cbi-icon: #{svg("./icons/" + $icon + ".svg")};
    };
 }
  
-@each $lang in $langs { @include icon($lang, $lang) }
+@each $icon, $data in $langs { 
+   @include language(map.get($data, name), map.get($data, class), $icon);
+}
