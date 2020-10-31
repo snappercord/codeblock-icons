@@ -1,31 +1,50 @@
-@import 'icons';
+@import 'langs';
 
 code.hljs:not([class$='hljs']) {
-    padding: 0px;
-    
+   padding: 0px;
+   
 
-    &>.powercord-codeblock-lang {
-        display: flex;
+   &>.powercord-codeblock-lang {
+      display: flex;
 
-        padding: 0px;
+      padding: 0px;
 
-        margin-bottom: 0px;
+      margin-bottom: 0px;
     
         &::before {
-            padding: 2px 10px 0px 10px;
+         padding: 2px 10px 0px 10px;
 
-            content: "";
-        
-            background: var(--cbi-icon) center/70% no-repeat;
-            background-size: 15px;
-            background-position: 6px 2px;
+         content: "";
+      
+         background: var(--cbi-icon) center/70% no-repeat;
+         background-size: 15px;
+         background-position: 6px 2px;
 
-            border-right: 1px solid rgba(0, 0, 0, 0.2);
+         border-right: 1px solid rgba(0, 0, 0, 0.2);
 
-            margin-right: 6px;
-        }
-    }
-    &>table {
-        margin-left: 7px;
-    }
+         margin-right: 6px;
+      }
+   }
+   &>table {
+      margin-left: 7px;
+   }
+}
+
+code.hljs { --cbi-icon: #{svg('./icons/vscode-material-icon-theme/icons/file.svg')}; }
+ 
+@each $name, $data in $langs {
+   $icon: map_get($data, icon);
+
+   @if ($icon != 'false') {
+      $selector: "";
+      
+      @each $i, $class in map_get($data, classes) {
+         $proceeding: "";
+         @if ($i != 0) { $proceeding: ","; }
+
+         $selector: $selector + $proceeding + "code.hljs." + $class;
+      }
+         
+      #{$selector} { --cbi-icon: #{svg("./icons/" + $icon + ".svg")}; };
+   }
 }
