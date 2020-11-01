@@ -45,6 +45,6 @@ Web:
 </details>
 
 ### Credits
-- [Snapperito](https://github.com/Snapperito): Idea, Method, & Layout
-- [MulverineX](https://github.com/MulverineX): Refactor, maintenance
+- [Snapperito](https://github.com/Snapperito): Idea, Method, maintenance,  & Layout
+- [MulverineX](https://github.com/MulverineX): Refactor, maintenance, BD port help
 - [AAGaming](https://github.com/ADoesGit): Github Actions script to build files for performance.
